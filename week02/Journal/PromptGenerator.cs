@@ -1,8 +1,9 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 public class PromptGenerator
 {
-    public List<string> _prompts = new List<string>()
+    List<string> _prompt = new List<string>
     {
         "Who was the most interesting person I interacted with today?",
         "What was the best part of my day?",
@@ -11,13 +12,17 @@ public class PromptGenerator
         "If I had one thing I could do over today, what would it be?"
     };
 
+
     public PromptGenerator()
     {
-        
+
     }
 
-    public string  GetRandomPrompt()
+    public string GetRandomPrompt()
     {
-        return "";
+        Random randomGenerator = new Random();
+        int number = randomGenerator.Next(0, 4);
+
+        return (_prompt[number]);
     }
 }

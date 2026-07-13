@@ -13,13 +13,11 @@ public class Entry
 
     public void Display()
     {
-
+        Console.WriteLine($"Date: {_date}");
+        Console.WriteLine("Prompt:");
+        Console.WriteLine($"{_promptText}");
+        Console.WriteLine("Answer:");
+        Console.WriteLine($"{_entryText}");
+        Console.WriteLine("");
     }
-
-    public void ToFileString()
-    {
-
-    }
-
-
 }
