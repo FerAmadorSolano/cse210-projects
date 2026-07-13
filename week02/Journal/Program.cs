@@ -1,7 +1,7 @@
 /* 
 Author: Luisa Fernanda Amador Solano
 
-Description: 
+Description: A personal journal application that allows users to write, save, and review entries while tracking their mood for a more personalized experience.
 
 */
 class Program
