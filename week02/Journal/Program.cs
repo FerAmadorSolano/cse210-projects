@@ -1,7 +1,9 @@
-using System;
-using System.Numerics;
-using System.Reflection.Emit;
+/* 
+Author: Luisa Fernanda Amador Solano
 
+Description: 
+
+*/
 class Program
 {
     static void Main(string[] args)
@@ -38,6 +40,48 @@ class Program
                 // Read the answer
                 string response = Console.ReadLine();
 
+                // Ask for the mood of the user
+                Console.WriteLine();
+                Console.WriteLine("How are you feeling today? (Enter just the number)");
+                Console.WriteLine("1 - 😊 Great");
+                Console.WriteLine("2 - 🙂 Good");
+                Console.WriteLine("3 - 😐 Okay");
+                Console.WriteLine("4 - 😔 Bad");
+                Console.WriteLine("5 - 😢 Terrible");
+
+                Console.Write("Choose an option: ");
+                int moodOption = int.Parse(Console.ReadLine());
+
+                // Change the mood
+                string mood = "";
+
+                switch (moodOption)
+                {
+                    case 1:
+                        mood = "😊 Great";
+                        break;
+
+                    case 2:
+                        mood = "🙂 Good";
+                        break;
+
+                    case 3:
+                        mood = "😐 Okay";
+                        break;
+
+                    case 4:
+                        mood = "😔 Bad";
+                        break;
+
+                    case 5:
+                        mood = "😢 Terrible";
+                        break;
+
+                    default:
+                        mood = "Unknown";
+                        break;
+                }
+
                 // Get the date
                 string date = DateOnly.FromDateTime(DateTime.Today).ToString();
 
@@ -45,6 +89,7 @@ class Program
                 anEntry._promptText = prompt;
                 anEntry._entryText = response;
                 anEntry._date = date;
+                anEntry._mood = mood;
 
                 // Add the response to the Journal
                 theJournal.AddEntry(anEntry);
