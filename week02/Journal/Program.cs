@@ -9,7 +9,6 @@ class Program
     static void Main(string[] args)
     {
         Journal theJournal = new Journal();
-
         PromptGenerator generatePrompt = new PromptGenerator();
         int option = 0;
 
