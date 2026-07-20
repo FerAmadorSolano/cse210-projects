@@ -1,3 +1,9 @@
+/* 
+Author: Luisa Fernanda Amador Solano
+
+Description: Program that helps users memorize scriptures by hiding random words each time they press Enter until the entire scripture is hidden. It uses separate classes for the reference, scripture, and words to keep the code organized. As an extra feature, I added a ScriptureLibrary class that stores several scriptures and randomly selects one each time the program starts. I also made sure that only visible words are hidden, so the same word is not selected twice.
+*/
+
 using System;
 
 class Program
@@ -5,7 +11,9 @@ class Program
     static void Main(string[] args)
     {
         Reference reference = new Reference("John", 3, 16);
-        Scripture scripture = new Scripture(reference, "For God so loved the world that he gave his only begotten Son.");
+        ScriptureLibrary library = new ScriptureLibrary();
+
+        Scripture scripture = library.GetRandomScripture();
 
         while (!scripture.IsCompletelyHidden())
         {
@@ -29,6 +37,7 @@ class Program
         Console.WriteLine(scripture.GetDisplayText());
 
         Console.WriteLine("\nAll words are now hidden!");
+        Console.WriteLine("Have an excellent day!");
 
 
     }
