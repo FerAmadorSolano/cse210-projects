@@ -25,7 +25,7 @@ public class Word
     {
         return _isHidden;
     }
-    
+
     public string GetDisplayText()
     {
         if (_isHidden)

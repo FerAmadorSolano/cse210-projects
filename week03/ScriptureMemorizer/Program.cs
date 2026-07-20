@@ -11,32 +11,40 @@ class Program
     static void Main(string[] args)
     {
         Reference reference = new Reference("John", 3, 16);
-        ScriptureLibrary library = new ScriptureLibrary();
 
+        // Create a library of scriptures and select one at random.
+        ScriptureLibrary library = new ScriptureLibrary();
         Scripture scripture = library.GetRandomScripture();
 
+        // Continue displaying the scripture until all words are hidden.
         while (!scripture.IsCompletelyHidden())
         {
             Console.Clear();
+
+            // Display the current scripture.
             Console.WriteLine(scripture.GetDisplayText());
 
+            // Ask the user to continue or quit.
             Console.WriteLine("Press Enter to continue or type 'quit':");
 
             string input = Console.ReadLine();
 
+            // End the program if the user types "quit".
             if (input.ToLower() == "quit")
             {
                 Console.WriteLine("Have an excellent day!");
                 break;
             }
 
+            // Hide three random visible words.
             scripture.HideRandomWords(3);
         }
 
         Console.Clear();
         Console.WriteLine(scripture.GetDisplayText());
 
-        Console.WriteLine("\nAll words are now hidden!");
+        Console.WriteLine("");
+        Console.WriteLine("All words are now hidden!");
         Console.WriteLine("Have an excellent day!");
 
 
