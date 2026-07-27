@@ -45,9 +45,9 @@ class Program
         Comment com33 = new Comment("Felix", "Great video :)");
 
         // Add the comments to the videos
-        video1.AddComment(com31);
-        video1.AddComment(com32);
-        video1.AddComment(com33);
+        video3.AddComment(com31);
+        video3.AddComment(com32);
+        video3.AddComment(com33);
 
         videos.Add(video3);
 
@@ -60,9 +60,9 @@ class Program
         Comment com43 = new Comment("Felix", "Now I understand the difference between classes and objects :)");
 
         // Add the comments to the videos
-        video1.AddComment(com41);
-        video1.AddComment(com42);
-        video1.AddComment(com43);
+        video4.AddComment(com41);
+        video4.AddComment(com42);
+        video4.AddComment(com43);
 
         videos.Add(video4);
 
