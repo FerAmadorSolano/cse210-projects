@@ -21,16 +21,19 @@ class Program
         order2.AddProduct(new Product("Colored Markers", "S202", 8.75, 2));
 
         // Display Orders
+        Console.WriteLine();
         Console.WriteLine("===== ORDER 1 =====");
         Console.WriteLine();
         Console.WriteLine(order1.GetPackingLabel());
         Console.WriteLine(order1.GetShippingLabel());
         Console.WriteLine($"Total Cost: ${order1.CalculateTotalCost()}");
+        Console.WriteLine();
 
         Console.WriteLine("===== ORDER 2 =====");
         Console.WriteLine();
         Console.WriteLine(order2.GetPackingLabel());
         Console.WriteLine(order2.GetShippingLabel());
         Console.WriteLine($"Total Cost: ${order2.CalculateTotalCost()}");
+        Console.WriteLine();
     }
 }
