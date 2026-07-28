@@ -9,12 +9,15 @@ public class Address
 
     public Address(string street, string city, string stateProvidence, string country)
     {
-
+        _street = street;
+        _city = city;
+        _stateProvidence = stateProvidence;
+        _country = country;
     }
 
     public bool IsInUSA()
     {
-        if(_country.ToUpper() == "USA")
+        if (_country.ToUpper() == "USA")
         {
             return true;
         }
@@ -23,7 +26,7 @@ public class Address
             return false;
         }
     }
-    
+
     public string GetDisplayAddress()
     {
         return $"{_street}\n{_city}, {_stateProvidence}\n{_country}";

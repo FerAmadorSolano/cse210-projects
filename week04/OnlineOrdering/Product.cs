@@ -4,10 +4,10 @@ public class Product
 {
     private string _name;
     private string _productId;
-    private float _price;
+    private double _price;
     private int _quantity;
 
-    public Product(string name, string productId, float price, int quantity)
+    public Product(string name, string productId, double price, int quantity)
     {
         _name = name;
         _productId = productId;

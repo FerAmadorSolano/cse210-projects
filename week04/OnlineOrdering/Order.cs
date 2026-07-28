@@ -45,7 +45,7 @@ public class Order
 
         foreach (Product product in _products)
         {
-            label += $"{product.GetName()} - {product.GetProductId()}";
+            label += $"{product.GetName()} - {product.GetProductId()}\n";
         }
 
         return label;
