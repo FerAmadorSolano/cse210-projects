@@ -1,0 +1,4 @@
+24
+SimpleGoal|Reading|3|True
+EternalGoal|marriage|7
+ChecklistGoal| homework|4|3|2|3
